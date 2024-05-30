@@ -1,0 +1,27 @@
+PROGRAM 1
+
+//SUM OF DIGITS OF A FIVE DIGIT NUMBER
+
+#include <stdio.h>
+
+int main() {
+	
+    int n;
+    int digit;
+    int sum=0;
+    scanf("%d", &n);
+    
+    if (n < 10000 || n > 99999) {
+        printf("Error: The number is not a five-digit number.\n");
+        return 1;
+    }
+     for (int i = 0; i < 5; i++) {
+        digit = n % 10;  
+        sum += digit;         
+        n /= 10;         
+    }
+
+    
+    printf("%d\n", sum);
+    return 0;
+}
